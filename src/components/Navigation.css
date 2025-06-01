@@ -1,0 +1,39 @@
+.navbar-burger > .burger {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0 5px 7px;
+}
+.navbar-burger > .burger > * {
+    content: "";
+    background-color: #fff;
+    width: 30px;
+    height: 5px;
+    margin-block: 2px;
+}
+.navbar-burger > .exit {
+    margin: 13px 0 0 5px;
+}
+.navbar-burger > .exit > * {
+    content: "";
+    background-color: #fff;
+    width: 30px;
+    height: 5px;
+}
+.navbar-burger > .exit > :nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+}
+.navbar-burger > .exit > :nth-child(2) {
+    transform: rotate(-45deg);
+}
+li {
+    padding-block: 10px;
+}
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
