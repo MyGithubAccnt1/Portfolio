@@ -32,14 +32,14 @@ function Projects() {
             src: '/flex2.png',
             title: 'Self Project - QUOTE FORM GENERATOR',
             features: ['Automated Calculation', 'Download to PDF', 'Dynamic Content'],
-            codestack: ['HTML', 'JavaScript'],
+            codestack: ['React'],
         },
         {
             href: 'https://mygithubaccnt1.github.io/ID-generator/',
             src: '/flex3.jpeg',
             title: 'Self Project - ID GENERATOR',
             features: ['Automated Design', 'Download to PNG', '180 Degree Horizontal 3D View'],
-            codestack: ['React', 'JSX'],
+            codestack: ['React'],
         },
     ]
 

@@ -47,8 +47,8 @@ function Hero() {
                 <br/>
                 <div style={{display: 'flex', alignItems: 'end', justifyContent: 'space-between'}}>
                     <p style={{color: '#fff'}}>WEB DEVELOPER</p>
-                    <a style={addButton} href="https://www.facebook.com/MVB17/" target="_blank">
-                        <b>Contact me on Facebook</b>
+                    <a style={addButton} href="https://m.me/MVB17" target="_blank">
+                        <b>Contact me on Messenger</b>
                     </a>
                 </div>
                 <hr style={{color: '#fff', marginTop: '10px', width: 'calc(100% - 2.5%)'}}/>
