@@ -29,7 +29,7 @@ function Projects() {
         },
         {
             href: 'https://mygithubaccnt1.github.io/Quotation/',
-            src: '/flex2.png',
+            src: '/flex2.jpeg',
             title: 'Self Project - QUOTE FORM GENERATOR',
             features: ['Automated Calculation', 'Download to PDF', 'Dynamic Content'],
             codestack: ['React'],
