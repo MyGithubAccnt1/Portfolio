@@ -29,14 +29,14 @@ function Projects() {
         },
         {
             href: 'https://mygithubaccnt1.github.io/Quotation/',
-            src: '/flex2.jpeg',
+            src: `${import.meta.env.BASE_URL}flex2.jpeg`,
             title: 'Self Project - QUOTE FORM GENERATOR',
             features: ['Automated Calculation', 'Download to PDF', 'Dynamic Content'],
             codestack: ['React'],
         },
         {
             href: 'https://mygithubaccnt1.github.io/ID-generator/',
-            src: '/flex3.jpeg',
+            src: `${import.meta.env.BASE_URL}flex3.jpeg`,
             title: 'Self Project - ID GENERATOR',
             features: ['Automated Design', 'Download to PNG', '180 Degree Horizontal 3D View'],
             codestack: ['React'],
@@ -54,9 +54,9 @@ function Projects() {
                                 <img src={project.src} alt={project.title} style={{height: '200px'}}/>
                             ) : (
                                 <>
-                                    <img src="/flex.gif" alt={project.title} style={{height: '200px'}}/>
-                                    <img src="/flex_thesis.png" alt={project.title} style={{position: 'absolute', top: '0', opacity: '0.6', height: '200px'}}/>
-                                    <img src="/flex_thesis_1.png" alt={project.title} style={{height: '200px', marginTop: '10px'}}/>
+                                    <img src={`${import.meta.env.BASE_URL}flex.gif`} alt={project.title} style={{height: '200px'}}/>
+                                    <img src={`${import.meta.env.BASE_URL}flex_thesis.png`} alt={project.title} style={{position: 'absolute', top: '0', opacity: '0.6', height: '200px'}}/>
+                                    <img src={`${import.meta.env.BASE_URL}flex_thesis_1.png`} alt={project.title} style={{height: '200px', marginTop: '10px'}}/>
                                 </>
                             )}
                         </div>
@@ -85,7 +85,7 @@ function Projects() {
                         </div>
                     </a>
                 ))}
-s            </div>
+            </div>
         </>
     )
 }

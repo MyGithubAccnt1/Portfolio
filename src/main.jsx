@@ -4,13 +4,17 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Notfound from './pages/Notfound.jsx'
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
     errorElement: <Notfound/>,
   },
-])
+], {
+  basename: '/Portfolio'
+})
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}/>
