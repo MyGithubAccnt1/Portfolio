@@ -2,13 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-export default defineConfig({
-  base: import.meta.env.MODE === "production" && "/Portfolio/",
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/Portfolio/' : '',
+  plugins: [react(), tailwindcss()],
   server: {
     host: true,
   },
-})
+}))
