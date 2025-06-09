@@ -1,4 +1,3 @@
-
 function Hero() {
     const hero = {
         position: 'relative',
@@ -11,8 +10,7 @@ function Hero() {
             linear-gradient(112.5deg, rgb(215, 215, 215) 0%, rgb(215, 215, 215) 46%, rgb(198, 198, 198) 46%, rgb(198, 198, 198) 49%, rgb(181, 181, 181) 49%, rgb(181, 181, 181) 56%, rgb(164, 164, 164) 56%, rgb(164, 164, 164) 61%, rgb(146, 146, 146) 61%, rgb(146, 146, 146) 75%, rgb(129, 129, 129) 75%, rgb(129, 129, 129) 84%, rgb(112, 112, 112) 84%, rgb(112, 112, 112) 100%),
             linear-gradient(90deg, rgb(182, 182, 182), rgb(155, 155, 155))
         `,
-        backgroundBlendMode: 'overlay, overlay, overlay, normal',
-        position: 'relative',
+        backgroundBlendMode: 'overlay, overlay, overlay, normal'
     }
     const addButton = {
         marginRight: '2.5%',

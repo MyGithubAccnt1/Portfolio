@@ -1,3 +1,5 @@
+import { getAssetPath } from '../utils/pathUtils';
+
 function Projects() {
     const parent = {
         padding: '2.5%',
@@ -51,12 +53,12 @@ function Projects() {
                     <a href={project.href} target="_blank" style={box} key={index}>
                         <div className="hidden lg:block" style={{width: '25%', position: 'relative'}}>
                             {project.src ? (
-                                <img src={project.src} alt={project.title} style={{height: '200px'}}/>
+                                <img src={getAssetPath(project.src)} alt={project.title} style={{height: '200px'}}/>
                             ) : (
                                 <>
-                                    <img src="/flex.gif" alt={project.title} style={{height: '200px'}}/>
-                                    <img src="/flex_thesis.png" alt={project.title} style={{position: 'absolute', top: '0', opacity: '0.6', height: '200px'}}/>
-                                    <img src="/flex_thesis_1.png" alt={project.title} style={{height: '200px', marginTop: '10px'}}/>
+                                    <img src={getAssetPath('/flex.gif')} alt={project.title} style={{height: '200px'}}/>
+                                    <img src={getAssetPath('/flex_thesis.png')} alt={project.title} style={{position: 'absolute', top: '0', opacity: '0.6', height: '200px'}}/>
+                                    <img src={getAssetPath('/flex_thesis_1.png')} alt={project.title} style={{height: '200px', marginTop: '10px'}}/>
                                 </>
                             )}
                         </div>
@@ -85,7 +87,7 @@ function Projects() {
                         </div>
                     </a>
                 ))}
-s            </div>
+            </div>
         </>
     )
 }

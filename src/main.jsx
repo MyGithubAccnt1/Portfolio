@@ -5,6 +5,8 @@ import './index.css'
 import App from './App.jsx'
 import Notfound from './pages/Notfound.jsx'
 
+const baseName = import.meta.env.MODE === "development" ? "/" : "/Portfolio";
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -12,11 +14,11 @@ const router = createBrowserRouter([
     errorElement: <Notfound/>,
   },
 ], {
-  basename: '/Portfolio'
-})
+  basename: baseName
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}/>
-  </StrictMode>,
-)
+  </StrictMode>
+);
