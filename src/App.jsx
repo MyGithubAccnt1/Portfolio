@@ -1,11 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Navigation from "./components/Navigation"
-import Home from "./pages/Home"
-
-import './index.css'
+import Navigation from "./components/Navigation";
+import "./index.css";
 
 function App() {
-
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -14,7 +11,7 @@ function App() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
