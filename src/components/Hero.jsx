@@ -1,3 +1,4 @@
+import { FaFacebookMessenger } from 'react-icons/fa';
 function Hero() {
     const hero = {
         position: 'relative',
@@ -19,18 +20,6 @@ function Hero() {
         color: '#fff',
         padding: '5px 15px'
     }
-    const parent = {
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
-        boxShadow: '0 25px 45px rgba(0, 0, 0, 0.1)',
-        border: '1px solid rgba(255, 255, 255, 0.5)',
-        borderRadius: '5px',
-        borderRight: '1px solid rgba(255, 255, 255, 0.2)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
-        backdropFilter: 'blur(5px)',
-        display: 'flex',
-        padding: '50px',
-        marginInline: '2.5%',
-    }
     return (
         <>
             <div 
@@ -45,8 +34,8 @@ function Hero() {
                 <br/>
                 <div style={{display: 'flex', alignItems: 'end', justifyContent: 'space-between'}}>
                     <p style={{color: '#fff'}}>WEB DEVELOPER</p>
-                    <a style={addButton} href="https://www.facebook.com/MVB17/" target="_blank">
-                        <b>Contact me on Facebook</b>
+                    <a style={addButton} href="https://m.me/MVB17" target="_blank" className='flex flex-row gap-2 py-2! items-center'>
+                        <FaFacebookMessenger size={25} /><b>Contact me on Messenger</b>
                     </a>
                 </div>
                 <hr style={{color: '#fff', marginTop: '10px', width: 'calc(100% - 2.5%)'}}/>
