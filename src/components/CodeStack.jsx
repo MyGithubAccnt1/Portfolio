@@ -1,16 +1,8 @@
 import Slider from 'react-infinite-logo-slider'
 
 function CodeStack() {
-    const parent = {
-        position: 'relative',
-        overflowX: 'hidden',
-        padding: '2.5%',
-        paddingBottom: '0',
-        width: '100%',
-    }
 
     const box = {
-        display: 'inline-block',
         backgroundColor: 'rgba(255, 255, 255, 0.2)',
         boxShadow: '0 25px 45px rgba(0, 0, 0, 0.1)',
         border: '1px solid rgba(255, 255, 255, 0.5)',
@@ -18,9 +10,7 @@ function CodeStack() {
         borderRight: '1px solid rgba(255, 255, 255, 0.2)',
         borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
         backdropFilter: 'blur(5px)',
-        padding: '20px',
-        minWidth: '100px',
-        marginInline: '15px'
+        padding: '30px',
     }
 
     const codestack = [
@@ -33,32 +23,41 @@ function CodeStack() {
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg', language: 'CSS'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg', language: 'JavaScript'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg', language: 'JQuery'},
-        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg', language: 'Laravel'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', language: 'ReactJS'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg', language: 'VueJS'},
+        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg', language: 'ThreeJS'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg', language: 'NodeJS'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg', language: 'ExpressJS'},
+        {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg', language: 'Laravel'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg', language: 'MySQL'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg', language: 'MongoDB'},
     ]
 
     return (
-        <>
-            <div style={parent}>
-                <b style={{color: '#fff'}}>Code Stack</b>
+        <div className='w-[100dvw] md:w-[80dvw] lg:w-[75dvw] mx-auto!'>
+            <b>Code Stack</b>
+            <div className='relative'>
+                <div className='content-[""] absolute z-2 top-0 left-0 w-[50px] h-full bg-gradient-to-r from-gray-300 dark:from-neutral-800 to-transparent'></div>
+                <div className='content-[""] absolute z-2 top-0 right-0 w-[50px] h-full bg-gradient-to-l from-gray-300 dark:from-neutral-800 to-transparent'></div>
                 <Slider
+                    className="absolute z-1"
                     duration={25}
                     pauseOnHover={true}
                     blurBorders={false}
                     blurBorderColor={'#fff'}>
                     {codestack.map((code, index) => (
-                        <Slider.Slide  style={box} key={index}>
-                            <img style={{width: '50px', marginInline: 'auto', marginBottom: '10px'}} src={code.src} alt={code.language}/>
+                        <Slider.Slide key={index}>
+                            <div style={box}>
+                                <img 
+                                className='w-[50px] mx-auto!'
+                                src={code.src} 
+                                alt={code.language}/>
+                            </div>
                         </Slider.Slide>
                     ))}
                 </Slider>
             </div>
-        </>
+        </div>
     )
 }
 

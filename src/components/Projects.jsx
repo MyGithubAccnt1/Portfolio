@@ -1,17 +1,8 @@
 import { getAssetPath } from "../utils/pathUtils";
 
 function Projects() {
-  const parent = {
-    padding: "2.5%",
-    paddingBottom: "0",
-    display: "flex",
-    flexDirection: "column",
-    gap: "15px",
-  };
 
   const box = {
-    display: "flex",
-    gap: "10px",
     backgroundColor: "rgba(255, 255, 255, 0.2)",
     boxShadow: "0 25px 45px rgba(0, 0, 0, 0.1)",
     border: "1px solid rgba(255, 255, 255, 0.5)",
@@ -19,7 +10,6 @@ function Projects() {
     borderRight: "1px solid rgba(255, 255, 255, 0.2)",
     borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
     backdropFilter: "blur(5px)",
-    padding: "20px",
   };
 
   const projects = [
@@ -37,14 +27,14 @@ function Projects() {
         "Comment Management",
         "Real-time Notifications",
       ],
-      codestack: ["HTML", "JavaScript", "JQuery", "PHP", "MySQL"],
+      codestack: ["HTML", "JavaScript", "JQuery", "PHP", "MySQL", "Bootstrap"],
     },
     {
       href: "https://mygithubaccnt1.github.io/Quotation/",
       src: "/flex2.png",
       title: "Self Project - QUOTE FORM GENERATOR",
       features: ["Automated Calculation", "Download to PDF", "Dynamic Content"],
-      codestack: ["JSX", "React JS"],
+      codestack: ["JSX", "React JS", "Tailwind"],
     },
     {
       href: "https://mygithubaccnt1.github.io/ID-generator/",
@@ -55,66 +45,67 @@ function Projects() {
         "Download to PNG",
         "180 Degree Horizontal 3D View",
       ],
-      codestack: ["JSX", "React JS"],
+      codestack: ["JSX", "React JS", "Tailwind"],
+    },
+    {
+      href: "https://mygithubaccnt1.github.io/BND/",
+      src: "/flex4.png",
+      title: "Client Project - BND",
+      features: [
+        "N/A",
+      ],
+      codestack: ["JSX", "React JS", "Tailwind"],
     },
   ];
 
   return (
-    <>
-      <div style={parent}>
-        <b style={{ color: "#fff" }}>Projects</b>
+    <div className='w-[100dvw] md:w-[80dvw] lg:w-[75dvw] mx-auto!'>
+      <b>Projects</b>
+      <div className="flex flex-col gap-5">
         {projects.map((project, index) => (
-          <a href={project.href} target="_blank" style={box} key={index}>
-            <div
-              className="hidden lg:block"
-              style={{ width: "25%", position: "relative" }}
-            >
+          <a href={project.href} target="_blank" style={box} className="flex gap-5 p-[30px]!" key={index}>
+            <div className="hidden lg:flex flex-col gap-3 justify-center w-[25%] relative">
               {project.src ? (
                 <img
                   src={getAssetPath(project.src)}
                   alt={project.title}
-                  style={{ height: "200px" }}
+                  className="h-[200px]"
                 />
               ) : (
                 <>
                   <img
                     src={getAssetPath("/flex.gif")}
                     alt={project.title}
-                    style={{ height: "200px" }}
+                    className="h-[200px]"
                   />
                   <img
                     src={getAssetPath("/flex_thesis.png")}
                     alt={project.title}
-                    style={{
-                      position: "absolute",
-                      top: "0",
-                      opacity: "0.6",
-                      height: "200px",
-                    }}
+                    className="absolute top-0 mt-[22px]! opacity-[0.6] h-[200px]"
                   />
                   <img
                     src={getAssetPath("/flex_thesis_1.png")}
                     alt={project.title}
-                    style={{ height: "200px", marginTop: "10px" }}
+                    className="h-[200px]"
                   />
                 </>
               )}
             </div>
-            <div style={{ color: "#fff" }}>
-              <h6>{project.title}</h6>
+            <div>
+              <h6 className="font-bold">{project.title}</h6>
               <br />
-              <p>Main Features:</p>
+              <p className="italic">Main Features:</p>
               {project.features.map((feature) => (
                 <>
-                  <b>- {feature}</b>
+                  <b className="italic">- {feature}</b>
                   <br />
                 </>
               ))}
               <br />
-              <p>Code Stack:</p>
+              <p className="italic">Code Stack:</p>
               {project.codestack.map((code) => (
                 <>
-                  <b>- {code}</b>
+                  <b className="italic">- {code}</b>
                   <br />
                 </>
               ))}
@@ -122,7 +113,7 @@ function Projects() {
           </a>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

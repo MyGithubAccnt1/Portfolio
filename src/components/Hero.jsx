@@ -1,10 +1,6 @@
 import { FaFacebookMessenger } from 'react-icons/fa';
 function Hero() {
     const hero = {
-        position: 'relative',
-        padding: '50px',
-        marginInline: '2.5%',
-        borderRadius: '10px',
         backgroundImage: `
             linear-gradient(67.5deg, rgb(215, 215, 215) 0%, rgb(215, 215, 215) 46%, rgb(198, 198, 198) 46%, rgb(198, 198, 198) 49%, rgb(181, 181, 181) 49%, rgb(181, 181, 181) 56%, rgb(164, 164, 164) 56%, rgb(164, 164, 164) 61%, rgb(146, 146, 146) 61%, rgb(146, 146, 146) 75%, rgb(129, 129, 129) 75%, rgb(129, 129, 129) 84%, rgb(112, 112, 112) 84%, rgb(112, 112, 112) 100%),
             linear-gradient(22.5deg, rgb(215, 215, 215) 0%, rgb(215, 215, 215) 46%, rgb(198, 198, 198) 46%, rgb(198, 198, 198) 49%, rgb(181, 181, 181) 49%, rgb(181, 181, 181) 56%, rgb(164, 164, 164) 56%, rgb(164, 164, 164) 61%, rgb(146, 146, 146) 61%, rgb(146, 146, 146) 75%, rgb(129, 129, 129) 75%, rgb(129, 129, 129) 84%, rgb(112, 112, 112) 84%, rgb(112, 112, 112) 100%),
@@ -13,34 +9,35 @@ function Hero() {
         `,
         backgroundBlendMode: 'overlay, overlay, overlay, normal'
     }
-    const addButton = {
-        marginRight: '2.5%',
-        borderRadius: '5px',
-        backgroundColor: 'blue',
-        color: '#fff',
-        padding: '5px 15px'
-    }
     return (
-        <>
+        <div className='w-[100dvw] md:w-[80dvw] lg:w-[75dvw] mx-auto!'>
             <div 
-                className="text-center text-black"
-                style={hero}>
+                style={hero}
+                className="text-center text-black rounded-lg p-[50px]!">
                 <h1 className="text-2xl">Hello World!</h1>
                 <h5 className="text-2xl">Thank you for visiting.</h5>
             </div>
-            <div
-                style={{margin: '20px 0 0 2.5%',}}>
-                <b style={{fontSize: '2rem', color: '#fff'}}>Mhel Voi A. Bernabe</b>
+            <div className='my-[20px]!'>
+                <b className='text-4xl'>Mhel Voi A. Bernabe</b>
                 <br/>
-                <div style={{display: 'flex', alignItems: 'end', justifyContent: 'space-between'}}>
-                    <p style={{color: '#fff'}}>WEB DEVELOPER</p>
-                    <a style={addButton} href="https://m.me/MVB17" target="_blank" className='flex flex-row gap-2 py-2! items-center'>
+                <div className='flex items-end justify-between'>
+                    <p className='font-bold'>WEB DEVELOPER</p>
+                    <a href="https://m.me/MVB17" target="_blank" 
+                    className='flex items-center gap-2 py-2! px-5! rounded-sm transistion-all duration-300
+                    border text-[#1877F2]
+                    hover:border-[#1877F2] hover:bg-[#1877F2] hover:text-white
+                    dark:border-0 dark:text-white dark:bg-[#1877F2]
+                    hover:dark:text-[#1877F2] hover:dark:bg-white
+                    '>
                         <FaFacebookMessenger size={25} /><b>Contact me on Messenger</b>
                     </a>
                 </div>
-                <hr style={{color: '#fff', marginTop: '10px', width: 'calc(100% - 2.5%)'}}/>
+                <div 
+                className='content-[""] mt-[10px]! w-full h-0.5
+                bg-gradient-to-b from-transparent via-black to-transparent
+                dark:from-white dark:via-transparent dark:to-white'></div>
             </div>
-        </>
+        </div>
     )
 }
 
