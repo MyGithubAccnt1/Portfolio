@@ -23,7 +23,7 @@ function Experience() {
       role: 'Full Stack Developer Intern',
       duration: '3 months',
       date: '2024',
-      responsibility: 'Develop business-focused web application that solves major business problems. Integrates manual workflows to automated paperless system.'
+      responsibility: 'Develop business-focused web application that solves major business problems using PHP, LARAVEL and MYSQL. Integrates manual workflows to automated paperless system.'
     },
     {
       company: '',
