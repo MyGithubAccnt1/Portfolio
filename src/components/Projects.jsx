@@ -50,9 +50,19 @@ function Projects() {
     {
       href: "https://mygithubaccnt1.github.io/BND/",
       src: "/flex4.png",
-      title: "Client Project - BND",
+      title: "Client Project",
       features: [
-        "N/A",
+        "Landing Page",
+      ],
+      codestack: ["JSX", "React JS", "Tailwind"],
+    },
+    {
+      href: "https://mygithubaccnt1.github.io/Gcash/",
+      src: "/flex5.jpeg",
+      title: "Client Project",
+      features: [
+        "GCash Recording System",
+        "Image Processing",
       ],
       codestack: ["JSX", "React JS", "Tailwind"],
     },
