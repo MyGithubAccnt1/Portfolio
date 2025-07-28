@@ -30,7 +30,7 @@ function Experience() {
       role: 'NCII Computer System Servicing',
       duration: '2020 - 2024',
       date: '',
-      responsibility: 'Install and configure server operating system.'
+      responsibility: 'Install and configure server operating system. Network configuration and cabling installation.'
     },
     {
       company: 'Speedfox Computer World',
