@@ -31,6 +31,7 @@ function CodeStack() {
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg', language: 'Laravel'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg', language: 'MySQL'},
         {src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg', language: 'MongoDB'},
+        {src: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_Apps_Script.svg', language: 'Google Apps Script'},
     ]
 
     return (
@@ -47,7 +48,7 @@ function CodeStack() {
                     blurBorderColor={'#fff'}>
                     {codestack.map((code, index) => (
                         <Slider.Slide key={index}>
-                            <div style={box}>
+                            <div style={box} title={code.language}>
                                 <img 
                                 className='w-[50px] mx-auto!'
                                 src={code.src} 

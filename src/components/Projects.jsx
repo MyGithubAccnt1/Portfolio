@@ -64,7 +64,7 @@ function Projects() {
         "GCash Managing System",
         "Image Processing",
       ],
-      codestack: ["JSX", "React JS", "Tailwind", "Google Apps Script"],
+      codestack: ["JSX", "React JS", "Tailwind", "Cloud-Based"],
     },
   ];
 
